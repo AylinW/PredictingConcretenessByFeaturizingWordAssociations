@@ -1,3 +1,21 @@
-This repository contains the code for the Master project "Predicing concreteness by featurizing word associations" (21.08.2023)
-The project investigates several association relationships with word concreteness in Brysbaert et al.'s (XXX) and DeDeyne et al.'s (XXX) data.
-[...]
+This repository contains the code for the Master project "Predicing concreteness by featurizing word associations" (from 21.08.2023)
+The project investigates several association relationships with word concreteness in Brysbaert et al.'s (2014) word concreteness ratings and DeDeyne et al.'s (2019) data.
+Those association relationships are used in predicting concreteness with linear regression as well as logistic regression, both with feature reductive penalisations.
+We conduct two types of modelling: with individual feature representations to compare model performance by features, and with all-feature representations to compare feature importance
+The tested association relationships are:
+- M1: A difference in the amount of association types for concrete and abstract targets
+- M2: A difference in the strength of association for concrete and abstarct targets
+- M3: A difference in the semnatic relation of target and association for concrete and abstract targets
+- M4: A difference in the semantic realtions between the target's associations for concrete and abstract targets
+- M5:  A difference in the amount of types in associated wordclasses for concrete and abstract targets
+
+This repository includes:
+- The code for building the target-association matrixes for each association relationhsip (aka indivifual feature representations): "AssociationTable_XXX"
+- The code for building the all-feature representations: "FeatureTable"
+- The code for the linear regression individual feature modelling: "LinearRegression_ElasticNet"
+- The code for the logistic regression individual feature modelling: "LogisticRegression_ElasticNet"
+- The code for the all-feature modelling feature importance and model performance: "FeatureModel"
+
+References:
+Brysbaert, M., New, B. & Keuleers, E. Adding part-of-speech information to the SUBTLEX-US word frequencies. Behav Res 44, 991–997 (2012). https://doi.org/10.3758/s13428-012-0190-4
+De Deyne S, Navarro DJ, Perfors A, Brysbaert M, Storms G. The "Small World of Words" English word association norms for over 12,000 cue words. Behav Res Methods. 2019 Jun;51(3):987-1006.
